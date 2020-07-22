@@ -1,0 +1,11 @@
+.tableBox{
+  width: 1000px;
+  height: 200px;
+  margin: 0 auto;
+}
+.spanred{
+  color: red;
+}
+.spanyellow{
+  color: green;
+}
