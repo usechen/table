@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Table } from 'antd';
-import './TableC.css';
+// import './TableC.less';
+import style from '@/compontens/TableC.module.less'
 import 'antd/dist/antd.css';
 
 const columns = [
@@ -119,7 +120,7 @@ biaotou.forEach((item, index) => {
         sorter: (a, b) => a[`const${items.bidConst}`] - b[`const${items.bidConst}`],
         render: (text, textitem) => {
           return (
-            <span className={text >= textitem[`const${diyici}`] ? 'spanred' : 'spanyellow'}>{text}</span>
+            <span className={text >= textitem[`const${diyici}`] ? style.spanred : style.spanyellow}>{text}</span>
           )
         }
       }
@@ -133,7 +134,7 @@ biaotou.forEach((item, index) => {
 class TableC extends Component {
   render() {
     return (
-      <div className='tableBox'>
+      <div className={style.tableBox}>
         <Table
           pagination={false}
           columns={columns}
