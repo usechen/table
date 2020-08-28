@@ -1,5 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, div } from 'react';
 import { Table, Select, InputNumber } from 'antd';
+import style from '@/compontens/TableSelect.module.less'
 const { Option } = Select;
 const provinceData = ['厂家1', '厂家2'];
 const cityData = {
@@ -17,9 +18,6 @@ const dataMoRen = [
     price: '- -'
   }
 ]
-
-
-
 
 class TableSelect extends Component {
   state = {
@@ -111,13 +109,13 @@ class TableSelect extends Component {
     ];
     console.log(data)
     return (
-      <Fragment>
+      <div className={style.Box}>
         <Table
           pagination={false}
           columns={columns}
           dataSource={data}
         />
-      </Fragment>
+      </div>
     )
   }
 }

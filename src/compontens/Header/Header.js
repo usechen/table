@@ -6,11 +6,12 @@ class Header extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      list: [1, 23, 4, 5]
+      list: [1, 23, 4, 5],
+      isHover: false,
     }
   }
   render() {
-    const { list } = this.state;
+    const { list, isHover } = this.state;
     console.log(list)
     return (
       <div className={`${style.header} clearfix`}>

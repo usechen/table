@@ -1,0 +1,33 @@
+.nav{
+  height: 30px;
+  background: #ff6915;
+  color: #fff;
+  .navBox{
+    width: 1190px;
+    margin: 0 auto;
+    line-height: 30px;
+    display: flex;
+    .navList{
+      display: inline-block;
+      width: 190px;
+      box-sizing: border-box;
+      padding-left: 10px;
+      background:linear-gradient(to right, #d83d00, #FF9933);
+      cursor:pointer;
+    }
+    .navListUl{
+      flex: 1;
+      display: flex;
+      margin: 0;
+      li{
+        padding: 0 18px;
+      }
+      .navItem{
+        cursor:pointer;
+        &:hover{
+          background: #F15517;
+        }
+      }
+    }
+  }
+}
