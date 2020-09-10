@@ -7,6 +7,7 @@ import Nav from '@/compontens/Nav/Nav.js';
 import TableSelect from '@/compontens/TableSelect';
 import ToDoList from '@/compontens/ToDoList';
 import SupplierSelection from '@/compontens/SupplierSelection';
+import Formbiaodan from '@/compontens/Formbiaodan';
 // import './App.less';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/baojia" component={TableSelect}></Route>
         <Route path="/todolist" component={ToDoList}></Route>
         <Route path="/supplier" component={SupplierSelection}></Route>
+        <Route path="/form" component={Formbiaodan}></Route>
       </Router>
     </div>
   );

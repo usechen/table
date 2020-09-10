@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import style from './index.module.less';
-import { Table, Select } from 'antd';
+import { Table, Select, Button, Modal } from 'antd';
 const { Option } = Select;
 class SupplierSelectiion extends Component {
   constructor(props) {
@@ -75,6 +75,7 @@ class SupplierSelectiion extends Component {
         }
       ],
       zongjia: 0,
+      visible: false,
     }
   }
   changeAll = (value) => {
@@ -121,6 +122,22 @@ class SupplierSelectiion extends Component {
       zongjia,
     })
   }
+  showModal = () => {
+    setTimeout(() => {
+
+      this.setState({
+        visible: true
+      })
+    }, 2000);
+  }
+  handleCancel = e => {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
+  };
+
+
   render() {
     const { value, data } = this.state;
     const columns = [
@@ -182,6 +199,17 @@ class SupplierSelectiion extends Component {
           scroll={{ y: 480 }}
         />,
         <div>交易总价{this.state.zongjia}</div>
+        <Button type="primary" onClick={this.showModal}>提交审批</Button>
+        <Modal
+          title="Basic Modal"
+          visible={this.state.visible}
+          onOk={this.handleOk}
+          onCancel={this.handleCancel}
+        >
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+        </Modal>
       </div>
     );
   }
